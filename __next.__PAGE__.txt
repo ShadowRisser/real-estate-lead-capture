@@ -1,0 +1,9 @@
+1:"$Sreact.fragment"
+2:I[47257,["/real-estate-lead-capture/_next/static/chunks/0jt4teo0pc-vc.js","/real-estate-lead-capture/_next/static/chunks/158myu8e_yme3.js","/real-estate-lead-capture/_next/static/chunks/08ca1r48qldn0.js"],"ClientPageRoot"]
+3:I[52683,["/real-estate-lead-capture/_next/static/chunks/0jt4teo0pc-vc.js","/real-estate-lead-capture/_next/static/chunks/158myu8e_yme3.js","/real-estate-lead-capture/_next/static/chunks/08ca1r48qldn0.js","/real-estate-lead-capture/_next/static/chunks/0e9ak4cx7lun_.js"],"default"]
+6:I[97367,["/real-estate-lead-capture/_next/static/chunks/0jt4teo0pc-vc.js","/real-estate-lead-capture/_next/static/chunks/158myu8e_yme3.js","/real-estate-lead-capture/_next/static/chunks/08ca1r48qldn0.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/real-estate-lead-capture/_next/static/chunks/0e9ak4cx7lun_.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"TnanYtKS4wQ0mBvCpDPVn"}
+4:{}
+5:"$0:rsc:props:children:0:props:serverProvidedParams:params"
+8:null
