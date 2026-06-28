@@ -356,15 +356,16 @@ function FeaturedProperties() {
   const inView = useInView(ref, { once: true, margin: '-80px' });
 
   useEffect(() => {
-    const fetchProps = async () => {
-      try {
-        const res = await fetch('/api/properties?featured=true');
-        const data = await res.json();
-        if (data.success) setProperties(data.properties);
-      } catch { /* fallback data */ }
-      setLoading(false);
-    };
-    fetchProps();
+    const data = [
+      {id:"p1",title:"Malibu Oceanfront Villa",description:"A breathtaking contemporary estate perched on the Malibu coastline, offering panoramic Pacific Ocean views from nearly every room. Designed by acclaimed architect James Cutler, this 6-bedroom, 8-bathroom residence features floor-to-ceiling glass walls, a private infinity pool, zen garden, and a fully equipped home theatre. The primary suite occupies the entire upper level with a private terrace overlooking the surf. Smart-home integrated throughout, with a private gated entrance and two-car garage.",price:12500000,address:"28473 Pacific Coast Hwy",city:"Malibu",state:"CA",bedrooms:6,bathrooms:8,sqft:7200,lotSize:"1.2 acres",yearBuilt:2021,propertyType:"Villa",imageUrl:"/images/property-1.png"},
+      {id:"p2",title:"Manhattan Sky Penthouse",description:"A stunning full-floor penthouse in the heart of Manhattan with sweeping views of Central Park, the Hudson River, and the city skyline. This 4-bedroom, 5-bathroom masterpiece boasts 12-foot ceilings, a chef's kitchen by Smallbone of Devizes, white oak herringbone flooring, and a 1,200 sq ft wraparound terrace. Building amenities include a private fitness centre, 24-hour doorman, and rooftop garden. Truly the pinnacle of New York luxury living.",price:18500000,address:"157 W 57th St",city:"New York",state:"NY",bedrooms:4,bathrooms:5,sqft:4800,yearBuilt:2019,propertyType:"Penthouse",imageUrl:"/images/property-2.png"},
+      {id:"p3",title:"Beverly Hills Modern Estate",description:"A gated contemporary compound in the prestigious Beverly Hills flats. This 7-bedroom, 9-bathroom estate spans over 10,000 sq ft of pure luxury, featuring a two-storey grand foyer, marble-clad formal living room, private cinema, wine cellar, and an indoor lap pool. The outdoor space is an entertainer's paradise with an infinity pool, outdoor kitchen, fire pit, and manicured gardens by renowned landscape designer Madison Cox.",price:28000000,address:"1245 Benedict Canyon Dr",city:"Beverly Hills",state:"CA",bedrooms:7,bathrooms:9,sqft:10200,lotSize:"1.8 acres",yearBuilt:2022,propertyType:"Estate",imageUrl:"/images/property-3.png"},
+      {id:"p4",title:"Miami Beach Waterfront",description:"A spectacular Art Deco-inspired waterfront residence in the heart of Miami Beach. This 5-bedroom, 6-bathroom home offers direct bay access with a private dock, heated infinity pool, and a rooftop terrace with 360-degree views. Interior highlights include Italian marble floors, custom millwork, a state-of-the-art open kitchen, and a spa wing with steam room and sauna. Steps from South Beach's finest dining and nightlife.",price:9500000,address:"42 Collins Ave",city:"Miami Beach",state:"FL",bedrooms:5,bathrooms:6,sqft:5500,yearBuilt:2020,propertyType:"Waterfront",imageUrl:"/images/property-4.png"},
+      {id:"p5",title:"Aspen Mountain Retreat",description:"A stunning mountain contemporary lodge set on 3.5 acres with unobstructed views of Aspen Mountain. This 6-bedroom, 7-bathroom retreat features a great room with 25-foot timber ceilings, a stone fireplace, a gourmet chef's kitchen, and an outdoor hot tub under the stars. Winter and summer alike, this home offers the ultimate Colorado lifestyle with ski-in/ski-out access and a private hiking trail network.",price:14500000,address:"789 Red Mountain Rd",city:"Aspen",state:"CO",bedrooms:6,bathrooms:7,sqft:6800,lotSize:"3.5 acres",yearBuilt:2018,propertyType:"Lodge",imageUrl:"/images/property-5.png"},
+      {id:"p6",title:"London Mayfair Townhouse",description:"An exquisite Georgian townhouse in the heart of Mayfair, one of London's most coveted addresses. This 5-bedroom, 5-bathroom residence has been meticulously restored and reimagined, blending original period features — cornicing, marble fireplaces, sash windows — with contemporary luxury. Features include a private courtyard garden, a wine cellar, a study with bespoke joinery, and a stunning master suite with dressing room and en suite.",price:11500000,address:"23 Grosvenor Square",city:"London",state:"UK",bedrooms:5,bathrooms:5,sqft:5200,yearBuilt:1790,propertyType:"Townhouse",imageUrl:"/images/property-6.png"},
+    ];
+    setProperties(data as any);
+    setLoading(false);
   }, []);
 
   const openDetail = (p: Property) => { setSelected(p); setDialogOpen(true); };
